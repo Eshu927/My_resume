@@ -10,4 +10,18 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     
     window.open(url, '_blank');
 });
+function secureAccess() {
+  const secretQuestion = "What is Shopian also known as?";
+  const secretAnswer = "apple town"; 
 
+  let userAnswer = prompt(secretQuestion);
+
+  if (userAnswer && userAnswer.toLowerCase().trim() === secretAnswer) {
+    alert("Access Granted!");
+  } else {
+    alert("Incorrect answer. Access denied.");
+    location.reload(); 
+  }
+}
+
+secureAccess();
